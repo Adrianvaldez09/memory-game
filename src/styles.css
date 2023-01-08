@@ -1,0 +1,343 @@
+.app-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0;
+}
+
+.Easy {
+    width: 500px;
+}
+
+.Medium {
+    width: 600px;
+}
+
+.Hard {
+    width: 700px;
+}
+
+.tile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(236, 236, 236);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+
+
+.failedState .tile-container {
+    pointer-events: none
+}
+
+.finished .tile-container {
+    pointer-events: none
+}
+
+.tile-container h3{
+    font-size: 4rem;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.clickedCorrect {
+    background-color: rgb(0, 168, 0);
+    pointer-events: none
+}
+
+.failedState .correctNotClicked{
+    background-color: gray;
+}
+
+
+
+.onGoing .correctNotClicked{
+    background-color: white;
+}
+
+.onGoing .wrongNotClicked{
+    background-color: white;
+}
+
+.onGoing .tile-container:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.onGoing .tile-container:hover h3 {
+    color: rgb(226, 226, 226);
+}
+
+.failedState .wrongNotClicked{
+    background-color: rgb(255, 191, 71);
+}
+
+
+.wrongButClicked {
+    background-color: red;
+}
+
+
+.clickedEarly {
+    background-color: red;
+}
+
+.rightSequence {
+    background-color: yellow;
+}
+
+.results{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.results .timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.results .status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.results .level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+}
+
+.btn-Container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.homepage-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepage-container h1{
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.homepage-container h3{
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.lvlChangerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 0;
+}
+
+.lvlButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 175px;
+    box-shadow: 0px 0px 10px 1px rgb(196, 196, 196);
+    font-size: 1.4rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lvlButton:hover  {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.startBtn {
+    background-color: rgb(123, 228, 196);
+}
+
+.easyLevel {
+    background-color: rgb(61, 235, 61);
+}
+.mediumLevel {
+    background-color: rgb(235, 154, 61);
+}
+.hardLevel {
+    background-color: rgb(235, 87, 61);
+}
+
+
+.results-container {
+    box-shadow: 0px 0px 10px 1px rgb(161, 161, 161);
+    width: 600px;
+    border-radius: 10px;
+}
+
+.results-list {
+    border-radius: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.results {
+    width: 100%;
+}
+
+.results-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu-button-container{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:20px auto;
+}
+
+.Failed {
+    background-color: rgb(255, 172, 172);
+}
+
+.Success{
+    background-color: rgb(170, 255, 59);
+}
+
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px grey;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(197, 197, 197);
+}
+
+.noAttempts {
+    display: none;
+}
+
+.timer, .currentLvl {
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.select-time-container{
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.select-time {
+    border: none;
+    border-radius: 5px;
+    width: 175px;
+    box-shadow: 0px 0px 10px 1px rgb(196, 196, 196);
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+.select-level{
+    margin-top: 40px;
+}
+
+.meme {
+    width: 600px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+}
+
+.results-headers{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+
+.results-headers h4{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
